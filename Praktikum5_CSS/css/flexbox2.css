@@ -1,0 +1,53 @@
+/* CSS Gambar 6: Header, Article, Aside, Nav, Footer */
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 30px;
+  font-family: "Times New Roman", serif;
+}
+
+.layout-enam {
+  display: flex;
+  flex-wrap: wrap;
+  width: min(700px, 100%);
+  min-height: 330px;
+  margin: auto;
+}
+
+.layout-enam header,
+.layout-enam footer {
+  flex: 0 0 100%;
+  background: #f0e58a;
+  padding: 16px;
+}
+
+.layout-enam main {
+  flex: 1;
+  min-height: 220px;
+  padding: 16px;
+  background: white;
+}
+
+.layout-enam aside {
+  flex: 0 0 22%;
+  padding: 16px;
+  background: pink;
+}
+
+.layout-enam nav {
+  flex: 0 0 22%;
+  padding: 16px;
+  background: #00cbb8;
+  order: 3;
+}
+
+.layout-enam footer { order: 4; }
+.layout-enam header { order: 0; }
+.layout-enam main { order: 1; }
+.layout-enam aside { order: 2; }
+
+@media (max-width: 550px) {
+  .layout-enam main { flex-basis: 100%; }
+  .layout-enam aside, .layout-enam nav { flex: 1; }
+}

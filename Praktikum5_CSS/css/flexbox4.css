@@ -1,0 +1,123 @@
+/* CSS Gambar 8(a) dan 8(b) */
+* { box-sizing: border-box; }
+
+body {
+  margin: 20px;
+  font-family: "Times New Roman", serif;
+}
+
+h2 {
+  font-size: 16px;
+  margin: 25px auto 10px;
+  max-width: 700px;
+}
+
+.layout-a {
+  display: flex;
+  width: min(700px, 100%);
+  min-height: 300px;
+  margin: 0 auto 45px;
+}
+
+.layout-a > nav {
+  flex: 0 0 23%;
+  background: #ffb7c6;
+  padding: 15px;
+}
+
+.kolom-a {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.kolom-a header, .kolom-a footer {
+  background: #f0e58a;
+  padding: 15px;
+  flex: 0 0 55px;
+}
+
+.kolom-a main {
+  display: flex;
+  flex: 1;
+  min-height: 190px;
+}
+
+.kolom-a article {
+  flex: 1;
+  padding: 15px;
+}
+
+.kolom-a aside {
+  flex: 0 0 25%;
+  background: #00d9d9;
+  padding: 15px;
+}
+
+/* Gambar 8(b) */
+.layout-b {
+  width: min(700px, 100%);
+  margin: 0 auto;
+  padding: 12px;
+  background: #ff9fa7;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-height: 330px;
+  color: white;
+  text-align: center;
+}
+
+.layout-b > header, .layout-b > footer {
+  background: #8ccdc3;
+  padding: 12px;
+  font-weight: bold;
+}
+
+.isi-b {
+  display: flex;
+  flex: 1;
+  gap: 10px;
+}
+
+.isi-b aside {
+  flex: 0 0 30%;
+  background: #59b6b1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.isi-b main {
+  flex: 1;
+  background: #f36e73;
+  padding: 10px;
+}
+
+.isi-b article {
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-end;
+  gap: 8px;
+}
+
+.isi-b article h3 {
+  flex: 0 0 100%;
+  margin: 0;
+}
+
+.gambar {
+  flex: 1;
+  min-width: 60px;
+  padding: 20px 5px;
+  background: #e98a8d;
+}
+
+@media (max-width: 550px) {
+  .layout-a { min-height: 260px; }
+  .layout-a > nav { flex-basis: 25%; }
+  .kolom-a aside { flex-basis: 30%; }
+  .isi-b aside { flex-basis: 25%; }
+}

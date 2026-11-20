@@ -1,0 +1,30 @@
+/* CSS Gambar 7: tiga kotak di atas dan lima di bawah */
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 30px;
+  background: white;
+}
+
+.galeri-flex {
+  width: min(700px, 100%);
+  margin: 30px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.baris-atas, .baris-bawah {
+  display: flex;
+  gap: 8px;
+}
+
+.baris-atas .item { flex: 1; height: 55px; }
+.baris-bawah .item { flex: 1; height: 55px; }
+
+.item {
+  border: 3px solid #222;
+  border-radius: 6px;
+  background: #eee;
+}

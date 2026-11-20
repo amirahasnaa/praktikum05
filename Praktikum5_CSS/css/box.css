@@ -1,0 +1,111 @@
+/* Pengaturan dasar untuk semua halaman CSS Box */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 30px;
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+}
+
+.browser {
+  position: relative;
+  width: min(700px, 100%);
+  margin: 20px auto;
+  padding: 20px;
+  border: 2px solid #999;
+  background: white;
+  min-height: 300px;
+}
+
+.kotak, .browser > div {
+  border: 2px solid #777;
+}
+
+.kuning { background: #f4eb45; }
+.oranye { background: #ff5b1f; }
+.hijau { background: #a9d994; }
+.biru { background: #42c9e8; }
+.abu { background: #d2d6da; }
+
+/* Gambar 1: empat kotak berjajar menggunakan positioning */
+.box1 {
+  height: 330px;
+}
+.box1 .kotak {
+  position: absolute;
+  top: 25px;
+  bottom: 25px;
+  width: 19%;
+}
+.box1 .kotak:nth-child(1) { left: 3%; }
+.box1 .kotak:nth-child(2) { left: 27%; }
+.box1 .kotak:nth-child(3) { left: 51%; }
+.box1 .kotak:nth-child(4) { left: 75%; }
+
+/* Gambar 2: empat gambar burung berjajar */
+.box1:has(.foto) {
+  background: #f4f5d9;
+}
+.foto {
+  position: absolute;
+  top: 25px;
+  width: 23%;
+  height: 210px;
+  object-fit: cover;
+}
+.box1 .foto:nth-child(1) { left: 2%; }
+.box1 .foto:nth-child(2) { left: 26%; }
+.box1 .foto:nth-child(3) { left: 50%; }
+.box1 .foto:nth-child(4) { left: 74%; }
+
+/* Gambar 3: kotak atas penuh, dua baris dua kolom */
+.box2 {
+  height: 390px;
+}
+.box2 > div { position: absolute; }
+.box2 .atas {
+  top: 18px; left: 2.5%; width: 95%; height: 70px;
+}
+.box2 .kiri-atas {
+  top: 125px; left: 2.5%; width: 20%; height: 125px;
+}
+.box2 .kanan-atas {
+  top: 125px; left: 27%; width: 70.5%; height: 125px;
+}
+.box2 .kiri-bawah {
+  top: 270px; left: 2.5%; width: 20%; height: 95px;
+}
+.box2 .kanan-bawah {
+  top: 270px; left: 27%; width: 70.5%; height: 95px;
+}
+
+/* Gambar 4: header, dua kolom, dan footer */
+.box3 {
+  height: 440px;
+}
+.box3 > div { position: absolute; }
+.box3 .header {
+  top: 15px; left: 2%; width: 96%; height: 55px;
+}
+.box3 .menu-kiri {
+  top: 85px; left: 2%; width: 20%; height: 270px;
+}
+.box3 .konten {
+  top: 85px; left: 24%; width: 52%; height: 270px;
+}
+.box3 .menu-kanan {
+  top: 85px; right: 2%; width: 20%; height: 270px;
+}
+.box3 .footer {
+  bottom: 15px; left: 2%; width: 96%; height: 45px;
+  background: #1765e8; border: 2px solid #555;
+}
+
+@media (max-width: 550px) {
+  body { padding: 10px; }
+  .box1 { gap: 8px; min-height: 220px; }
+  .box2, .box3 { transform-origin: top left; }
+}
